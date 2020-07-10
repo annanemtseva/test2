@@ -1,0 +1,84 @@
+<header class="wrap">
+  <div class="header">
+    <div class="my_container">
+      <a class="logo" routerLink="/">
+        <p>AppCo</p>
+      </a>
+    </div>
+  </div>
+  <div class="my_container">
+    <div class="block">
+      <div class="title-block">
+        <h1>
+          Brainstorming <small>for desired perfect Usability</small>
+        </h1>
+
+        <div class="subtitle">
+          Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!
+        </div>
+        <a class="main-link"  routerLink="/users">
+          Views Stats
+        </a>
+      </div>
+      <div class="phone-block">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="my_container">
+    <h2>Why <strong>small business owners love</strong> AppCo?</h2>
+    <h3>Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</h3>
+
+    <div class="group">
+      <div class="item">
+        <div class="img-13"></div>
+        <h4>Clean Design</h4>
+        <p>Increase sales by showing true dynamics of your website.</p>
+      </div>
+      <div class="item">
+        <div class="img-15"></div>
+        <h4>Secure Data</h4>
+        <p>Build your online store’s trust using Social Proof & Urgency.</p></div>
+      <div class="item">
+        <div class="img-14"></div>
+        <h4>Retina Ready</h4>
+        <p>Realize importance of social proof in customer’s purchase decision.</p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="my_container">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <label>
+      <input type="text" placeholder="     Enter your email" formControlName="email" class="form-control">
+    </label>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="form.invalid"
+    >Subscribe
+    </button>
+    <div class="error_message" *ngIf="form.get('email').invalid && form.get('email').touched">
+      <small *ngIf="form.get('email').errors.required">
+        The field cannot be empty
+      </small>
+      <small *ngIf="form.get('email').errors.email">
+        Enter the correct email
+      </small>
+    </div>
+  </form>
+  <div class="content">
+    <p class="footer-logo">AppCo</p>
+    <p>All rights reserved by ThemeTags</p>
+    <p>Copyrights © 2019.</p>
+
+  </div>
+  </div>
+</footer>
+
+

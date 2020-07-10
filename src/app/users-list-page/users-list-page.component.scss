@@ -1,0 +1,140 @@
+.font_montserrat_normal {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.font_montserrat_bold {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.header {
+  background-color: #3A80BA;
+}
+
+.logo {
+  padding: 10px 0 0;
+
+  p {
+    @extend .font_montserrat_normal;
+    font-size: 40px;
+    line-height: 49px;
+  }
+}
+
+ul{
+  background-color: blueviolet;
+}
+
+main {
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+    a {
+      @extend .font_montserrat_normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #CCCCCC;
+    }
+    a:hover{
+      color: #3A80BA;
+    }
+
+    div.active {
+      @extend .font_montserrat_normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #3A80BA;
+    }
+
+    .arrow {
+      background-image: url("../../assets/arrow.png");
+      width: 6px;
+      height: 10px;
+      margin: 0 8px;
+    }
+  }
+
+  h2 {
+    @extend .font_montserrat_bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #1A1A1A;
+    margin-top: 24px;
+    margin-bottom: 13px;
+  }
+.table{
+  overflow-x: scroll;
+  margin-bottom: 0;
+
+}
+  tr:nth-child(1) {
+    background: #3A80BA !important;
+    border: 1px solid #FFFFFF;
+    th:nth-child(1) {
+      padding: 14px 24px;
+
+    }
+    th{
+      padding: 14px 26px 14px;
+      @extend .font_montserrat_normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FFFFFF;
+      text-align: left;
+    }
+  }
+
+  tr:nth-child(2n) {
+    background: #FBFBFB;
+  }
+
+    tr:nth-child(2n+1) {
+      background: #f0f0f0;
+  }
+  td {
+    cursor: pointer;
+    padding: 6px 24px;
+    @extend .font_montserrat_normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1A1A1A;
+    text-align: center;
+  }
+  .card{
+    align-items: center;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 12px;
+  }
+
+}
+
+
+footer {
+  background: #1C3B55;
+  padding: 15px 0;
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer-logo{
+      @extend .font_montserrat_normal;
+      font-size: 24px;
+      line-height: 29px;
+      color: #FFFFFF;
+    }
+    p{
+      @extend .font_montserrat_normal;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}

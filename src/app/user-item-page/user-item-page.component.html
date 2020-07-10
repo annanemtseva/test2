@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="my_container">
+    <a class="logo" routerLink="/">
+      <p>AppCo</p>
+    </a>
+  </div>
+</div>
+<main>
+  <div class="my_container">
+    <div class="nav">
+      <a routerLink="/">Main page</a>
+      <div class="arrow">
+      </div>
+      <a routerLink="/users">User satistics</a>
+      <div class="arrow">
+      </div>
+      <div #name class="active">{{userFirstName}}</div>
+    </div>
+    <div class="my_container">
+      <h2>{{userFirstName}}</h2>
+      <h3>Clicks</h3>
+      <div class="chart-container-clicks">
+        <canvas id="clickCanvas" width="4" height="1"></canvas>
+      </div>
+
+      <h3>Vievs</h3>
+      <div class="chart-container-views" >
+        <canvas id="viewsCanvas" width="4" height="1"></canvas>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="my_container">
+    <div class="content">
+      <p class="footer-logo">AppCo</p>
+      <p>All rights reserved by ThemeTags</p>
+      <p>Copyrights © 2019.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,378 @@
+.font_montserrat_normal {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.font_montserrat_bold {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.wrap {
+  background-image: url('../../assets/Rectangle.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+.logo {
+  padding: 27px 0;
+
+  p {
+    @extend .font_montserrat_normal;
+    font-size: 40px;
+    line-height: 49px;
+
+  }
+}
+
+.block {
+  display: flex;
+}
+
+.title-block {
+  width: 50%;
+  padding: 15px 0 0;
+
+}
+
+h1 {
+  @extend .font_montserrat_bold;
+  font-size: 48px;
+  line-height: 59px;
+  color: #FFFFFF;
+
+  small {
+    @extend .font_montserrat_normal;
+  }
+}
+
+.subtitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 142%;
+  color: #FFFFFF;
+  margin: 25px 0 30px;
+}
+
+.main-link {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 142%;
+  text-align: center;
+  color: #3A80BA;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 17px 32px;
+  //margin: 25px 0 0;
+  display: inline-block;
+}
+
+.phone-block {
+  background-image: url("../../assets/mobile.png");
+  position: relative;
+  left: 168px;
+  top: -33px;
+  width: 365px;
+  height: 570px;
+}
+
+main {
+  h2 {
+    @extend .font_montserrat_normal;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #1A1A1A;
+    width: 42%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    @extend .font_montserrat_normal;
+    font-size: 20px;
+    line-height: 142%;
+    /* or 28px */
+    text-align: center;
+    color: #7E7E7E;
+    width: 61%;
+    margin: 20px auto 40px;
+  }
+
+  .group {
+    display: flex;
+    justify-content: space-between;
+    :last-child {
+      margin-right: 0 !important;
+    }
+    .item {
+      background: #FFFFFF;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+      border-radius: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 35px 40px;
+      margin-right: 20px;
+      width: 32%;
+
+
+      .img-13, .img-14, .img-15 {
+        width: 106px;
+        height: 96px;
+        margin: 0 auto;
+      }
+
+      .img-13 {
+        background-image: url("../../assets/13.png");
+      }
+
+      .img-14 {
+        background-image: url("../../assets/14.png");
+      }
+
+      .img-15 {
+        background-image: url("../../assets/15.png");
+      }
+
+      h4 {
+        @extend .font_montserrat_bold;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #1A1A1A;
+        margin: 40px auto 18px;
+      }
+
+      p {
+        @extend .font_montserrat_normal;
+        font-size: 16px;
+        line-height: 142%;
+        /* or 23px */
+        text-align: center;
+        color: #7E7E7E;
+      }
+    }
+
+  }
+}
+
+footer {
+  background-image: url("../../assets/Rectangle_footer.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: 50% 60%;
+ //padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 112px;
+  .form {
+    margin: 0 auto;
+    width: 579px;
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    input{
+      border: none;
+      width: 400px;
+      height: 64px;
+      border-radius: 10px;
+
+
+    }
+
+    button{
+      width: 176px;
+      height: 56px;
+      background: #3A80BA;
+      border-radius: 8px;
+      @extend .font_montserrat_normal;
+      font-size: 16px;
+      line-height: 142%;
+      /* identical to box height, or 23px */
+
+      text-align: center;
+
+      color: #FFFFFF;
+
+    }
+    .error_message{
+      position: absolute;
+      @extend .font_montserrat_normal;
+      font-size: 20px;
+      line-height: 39px;
+      text-align: center;
+      color: #1A1A1A;
+      top: -60px;
+      left: 10px;
+    }
+    }
+  }
+  .content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    padding-bottom: 40px;
+    align-items: center;
+    .footer-logo{
+      @extend .font_montserrat_normal;
+      font-size: 32px;
+      line-height: 39px;
+      color: #FFFFFF;
+    }
+    p{
+      @extend .font_montserrat_normal;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+
+@media (max-width: 1200px) {
+  .phone-block {
+    left: 40px;
+  }
+  footer {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 993px) {
+
+  .phone-block {
+    left: 40px;
+  }
+
+
+}
+
+@media (max-width: 769px) {
+  .block {
+    flex-direction: column;
+  }
+
+  .title-block {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+  .subtitle {
+    font-size: 20px;
+    margin: 20px 0 33px;
+  }
+  .phone-block {
+    left: 40%;
+  }
+  .group {
+    .item {
+      padding: 10px;
+      margin-right: 20px;
+      width: 30%;
+    }
+  }
+  footer {
+    background-position: 0;
+    padding-bottom: 0px;
+    padding-top: 50px;
+    margin-top: 20px;
+
+    .content {
+      padding-bottom: 10px;
+      align-items: center;
+
+      .footer-logo {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 577px) {
+  h1 {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  .phone-block {
+    width: 300px;
+    height: 450px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    left: 0;
+  }
+  main {
+    h2 {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h3 {
+      width: 80%;
+    }
+
+    .group {
+      flex-direction: column;
+
+      .item {
+        padding: 10px;
+        margin: 20px auto;
+        width: 90%;
+      }
+
+
+    }
+  }
+  footer {
+    .form {
+      width: 250px;
+      input{
+        width: 150px;
+        height: 40px;
+      }
+
+      button{
+        width: 100px;
+        height: 40px;
+      }
+    }
+    .content{
+      .footer-logo{
+        font-size: 26px;
+      }
+      p{
+        font-size: 12px;
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<div class="header">
+  <div class="my_container">
+    <a class="logo" routerLink="/">
+      <p>AppCo</p>
+    </a>
+  </div>
+</div>
+<main>
+  <div class="my_container">
+    <div class="nav">
+      <a routerLink="/">Main page</a>
+      <div class="arrow">
+      </div>
+      <div class="active">User satistics</div>
+    </div>
+
+    <h2>Users statistics</h2>
+    <div class="table">
+      <table>
+        <tr class="table-title">
+          <th>Id</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>IP address</th>
+          <th>Total clicks</th>
+          <th>Total page views</th>
+        </tr>
+        <tr id="userName" *ngFor="let user of pageOfItems" class="users-list" [routerLink]="['/user', user.firstName, user.id]" >
+          <td>{{user.id}}</td>
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.gender}}</td>
+          <td>{{user.ipAddress}}</td>
+          <td>{{user.totalClicks}}</td>
+          <td>{{user.totalPageViews}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+        <jw-pagination #mydiv [items]="users" [maxPages]="totalPages" [pageSize]="pageSize"
+                       (changePage)="onChangePage($event)"></jw-pagination>
+
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="my_container">
+    <div class="content">
+      <p class="footer-logo">AppCo</p>
+      <p>All rights reserved by ThemeTags</p>
+      <p>Copyrights © 2019.</p>
+    </div>
+  </div>
+</footer>
+
+
